@@ -190,6 +190,47 @@ h2{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;
 .kpi.gk .kpi-val{color:#fff}
 .kpi-sub{font-size:.7rem;color:var(--mid);margin-top:.15rem}
 .kpi.hi .kpi-sub{color:rgba(0,0,0,.4)}
+/* 1. EL FONDO Y EL BORDE DEL RECTÁNGULO */
+.kpi.mi-color {
+    /* 👇 AQUÍ CAMBIAS EL COLOR DE FONDO (ejemplo: azul brillante) */
+    background: #3498db; 
+    /* 👇 AQUÍ CAMBIAS EL BORDE (normalmente se pone el mismo que el fondo) */
+    border-color: #3498db; 
+}
+/* 2. LOS COLORES DEL TEXTO DENTRO DEL RECTÁNGULO */
+/* Nota: Si tu fondo es oscuro, usa textos blancos (#fff). Si es claro, usa oscuros (#000) */
+.kpi.mi-color .kpi-lbl {
+    /* Color de la etiqueta superior ("Total savings vs gas") */
+    color: rgba(255, 255, 255, 0.8); /* Blanco al 80% de opacidad */
+}
+.kpi.mi-color .kpi-val {
+    /* Color del número principal (el valor) */
+    color: #ffffff; /* Blanco puro */
+}
+.kpi.mi-color .kpi-sub {
+    /* Color del texto pequeñito de abajo ("over full contract") */
+    color: rgba(255, 255, 255, 0.6); /* Blanco al 60% de opacidad */
+}
+.kpi.mi-color2 {
+    /* 👇 AQUÍ CAMBIAS EL COLOR DE FONDO (ejemplo: azul brillante) */
+    background: #3498db; 
+    /* 👇 AQUÍ CAMBIAS EL BORDE (normalmente se pone el mismo que el fondo) */
+    border-color: #3498db; 
+}
+/* 2. LOS COLORES DEL TEXTO DENTRO DEL RECTÁNGULO */
+/* Nota: Si tu fondo es oscuro, usa textos blancos (#fff). Si es claro, usa oscuros (#000) */
+.kpi.mi-color2 .kpi-lbl {
+    /* Color de la etiqueta superior ("Total savings vs gas") */
+    color: rgba(255, 255, 255, 0.8); /* Blanco al 80% de opacidad */
+}
+.kpi.mi-color2 .kpi-val {
+    /* Color del número principal (el valor) */
+    color: #ffffff; /* Blanco puro */
+}
+.kpi.mi-color2 .kpi-sub {
+    /* Color del texto pequeñito de abajo ("over full contract") */
+    color: rgba(255, 255, 255, 0.6); /* Blanco al 60% de opacidad */
+}
 .kpi.gk .kpi-sub{color:rgba(255,255,255,.5)}
 .chart-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;margin-bottom:1rem}
 .chart-ttl{font-size:.78rem;font-weight:600;color:var(--black);margin-bottom:.3rem}
@@ -269,7 +310,7 @@ footer span{color:rgba(255,255,255,.22)}
   <div class="hero-content">
     <div class="hero-eyebrow">Energy-as-a-Service · Industrial Electrification · Denmark</div>
     <h1>Electrify your<br>industrial heat.<em>No upfront cost.</em></h1>
-    <p class="hero-sub">Replace gas boilers with efficient heat pumps. Pay only for the heat you consume. We design, finance, install and operate — everything.</p>
+    <p class="hero-sub">Replace gas boilers with efficient heat pumps or electric boilers depending on your temperature demand. Pay only for the heat you consume. We design, finance, install and operate — everything.</p>
     <div class="hero-actions">
       <a class="btn-yellow" href="#calculator">&#8595; Calculate your savings</a>
       <a class="btn-ghost" href="#solution">How it works</a>
@@ -301,10 +342,10 @@ footer span{color:rgba(255,255,255,.22)}
         <div class="capex-tag tag-old">Traditional approach &#8212; CAPEX</div>
         <h3>You buy the equipment</h3>
         <p>A gas electrification project requires a large upfront investment &#8212; capital that leaves your balance sheet immediately and takes years to recover.</p>
-        <div class="capex-amount bad">DKK 2.6M+</div>
+        <div class="capex-amount bad">DKK 10M+</div>
         <div class="capex-note">tied up in non-core infrastructure per project</div>
         <ul class="capex-items">
-          <li>5&#8211;6 year payback &#8212; far beyond the 3-year SME threshold</li>
+          <li>10&#8211;15 year payback &#8212; far beyond the 3-year SME threshold</li>
           <li>Your team must manage and maintain the asset</li>
           <li>Performance risk sits entirely with you</li>
           <li>Capital locked away from hiring, R&amp;D, or expansion</li>
@@ -331,7 +372,7 @@ footer span{color:rgba(255,255,255,.22)}
 <div class="emissions-strip">
   <div class="em-item"><span class="em-num">&#8722;75%</span><div class="em-label">Reduction in process heat<br>CO&#8322; emissions vs. gas boilers</div></div>
   <div class="em-div"></div>
-  <div class="em-item"><span class="em-num">4.3M DKK</span><div class="em-label">Customer net savings<br>over a 10-year contract</div></div>
+  <div class="em-item"><span class="em-num">13.96M DKK</span><div class="em-label">Customer net savings<br>over a 10-year contract</div></div>
   <div class="em-div"></div>
   <div class="em-item"><span class="em-num">ETS ready</span><div class="em-label">Lower carbon footprint supports<br>EU ETS compliance &amp; ESG reporting</div></div>
 </div>
@@ -351,9 +392,9 @@ footer span{color:rgba(255,255,255,.22)}
         <ul class="item-list">
           <li><span class="idot bad">&#10005;</span>High, volatile energy costs tied to gas market prices</li>
           <li><span class="idot bad">&#10005;</span>Significant CO&#8322; emissions and growing carbon liabilities</li>
-          <li><span class="idot bad">&#10005;</span>5&#8211;6 year payback &#8212; far beyond the 3-year SME threshold</li>
-          <li><span class="idot bad">&#10005;</span>DKK 2.5M+ upfront CAPEX locked in non-core infrastructure</li>
-          <li><span class="idot bad">&#10005;</span>Requires 2 full-time engineering hires to manage internally</li>
+          <li><span class="idot bad">&#10005;</span>10&#8211;15 year payback &#8212; far beyond the 3-year SME threshold</li>
+          <li><span class="idot bad">&#10005;</span>DKK 10M+ upfront CAPEX locked in non-core infrastructure</li>
+          <li><span class="idot bad">&#10005;</span>Requires full-time engineering hires to manage internally</li>
           <li><span class="idot bad">&#10005;</span>Boilers run 24/7 &#8212; even when production is paused</li>
         </ul>
       </div>
@@ -443,7 +484,7 @@ footer span{color:rgba(255,255,255,.22)}
       <div class="form-group">
         <label>Electricity price <span id="lbl-e">0.84 DKK/kWh</span></label>
         <input type="range" id="inp-e" min="0.40" max="2.00" step="0.02" value="0.84">
-        <div class="range-labels"><span>0.40</span>(Last 3yr avg)<span>2.00</span></div>
+        <div class="range-labels"><span>0.40</span>(last 3yr avg)<span>2.00</span></div>
       </div>
       <div class="form-group">
         <label>Contract duration <span id="lbl-t">10 years</span></label>
@@ -452,13 +493,13 @@ footer span{color:rgba(255,255,255,.22)}
       </div>
       <div class="case-box">
         <strong>&#128205; Dohler case study (default values)</strong>
-        4 MW plant &middot; 2200 annual working hours &middot; Gas OPEX 6.3M DKK/yr &middot; Elec 0.84 DKK/kWh &middot; 10-yr contract &middot; COP 3.2 &middot; CAPEX 13.58M DKK
+        4 MW plant &middot; 2200 h annualy &middot; Gas OPEX 6.3M DKK/yr &middot; Elec 0.84 DKK/kWh &middot; 10-yr contract &middot; COP 3.2 &middot; CAPEX 13.58M DKK
       </div>
     </div>
     <div>
       <div class="kpi-row">
-        <div class="kpi hi"><div class="kpi-lbl">Total savings vs gas</div><div class="kpi-val" id="r-sav">&#8212;</div><div class="kpi-sub" id="r-pct">over full contract</div></div>
-        <div class="kpi gk"><div class="kpi-lbl">CO&#8322; avoided</div><div class="kpi-val" id="r-co2">&#8212;</div><div class="kpi-sub">tonnes CO&#8322; per year</div></div>
+        <div class="kpi mi-color"><div class="kpi-lbl">Total savings vs gas</div><div class="kpi-val" id="r-sav">&#8212;</div><div class="kpi-sub" id="r-pct">over full contract</div></div>
+        <div class="kpi mi-color2"><div class="kpi-lbl">CO&#8322; avoided</div><div class="kpi-val" id="r-co2">&#8212;</div><div class="kpi-sub">tonnes CO&#8322; per year</div></div>
         <div class="kpi"><div class="kpi-lbl">Phase 1 annual fee</div><div class="kpi-val" id="r-f1">&#8212;</div><div class="kpi-sub" id="r-p1">includes loan repayment</div></div>
         <div class="kpi"><div class="kpi-lbl">Phase 2 annual fee</div><div class="kpi-val" id="r-f2">&#8212;</div><div class="kpi-sub" id="r-p2">energy + maintenance only</div></div>
       </div>
@@ -525,7 +566,7 @@ footer span{color:rgba(255,255,255,.22)}
   <form class="cform" onsubmit="handleSubmit(event)">
     <input type="text" placeholder="Company name" required>
     <input type="email" placeholder="Email address" required>
-    <input type="text" placeholder="Annual gas consumption (MWh/year)">
+    <input type="text" placeholder="Annual gas consumption (MWh/year) & Capacity (kW)">
     <textarea placeholder="Tell us briefly about your heat process and peak temperature requirements..."></textarea>
     <button class="btn-dark" type="submit">Request Free Energy Audit &#8594;</button>
   </form>
@@ -534,7 +575,7 @@ footer span{color:rgba(255,255,255,.22)}
 <footer>
   <a href="#" class="footer-logo"><img src="''' + A.LOGO + '''" alt="Enectrify"></a>
   <span>Removing the barrier for sustainable manufacturing &middot; DTU Startup &middot; Copenhagen, Denmark</span>
-  <span>&copy; 2025 Enectrify</span>
+  <span>&copy; 2026 Enectrify</span>
 </footer>
 
 <script>
